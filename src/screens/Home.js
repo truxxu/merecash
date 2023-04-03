@@ -1,13 +1,12 @@
 import React from 'react';
-import {View} from 'react-native';
 
-import {Button} from '../atoms';
+import {Button, ScreenTemplate} from '../atoms';
 
 const Home = () => {
   return (
-    <View>
+    <ScreenTemplate>
       <Button />
-    </View>
+    </ScreenTemplate>
   );
 };
 

@@ -1,14 +1,26 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, Pressable} from 'react-native';
 
-const Button = () => {
+import {colors, fonts, padding} from '../styles';
+
+const Button = ({title = 'test', action}) => {
   return (
-    <View>
-      <Text>Button</Text>
-    </View>
+    <Pressable onPress={action} style={styles.button}>
+      <Text style={styles.text}>{title}</Text>
+    </Pressable>
   );
 };
 
 export {Button};
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  button: {
+    backgroundColor: colors.primary,
+    padding: padding.sm,
+  },
+  text: {
+    color: colors.secondary,
+    textAlign: 'center',
+    fontSize: fonts.md,
+  },
+});
